@@ -1,6 +1,4 @@
-//#include "str.h"
-#include "mylen.c"
-
+#include "str.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -16,8 +14,8 @@ int main(){
   
   //testing strlen implementation 
   printf("Testing strlen(s2):\n");
-  //printf("[standard]:[%d]\n", strlen(s2));
-  //printf("[mine]:[%d]\n\n", mystrlen(s2));
+  printf("[standard]:[%ld]\n", strlen(s2));
+  printf("[mine]:[%d]\n\n", mystrlen(s2));
 
   
   //testing mystrncpy implementation 

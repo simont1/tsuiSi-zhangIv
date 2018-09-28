@@ -9,7 +9,7 @@ int mystrlen(char * source){
   return ctr;
 }
 
-char* mystrncpy(char *dest, char *source, int n);
+//char* mystrncpy(char *dest, char *source, int n);
 
 //char* mystrcat(char *dest, char *source);
 
@@ -17,4 +17,4 @@ char* mystrncpy(char *dest, char *source, int n);
 
 //char* mystrstr(char *s1, char *s2);
 
-//char* mystrcmp(char *s1, char *s2);
+//int mystrcmp(char *s1, char *s2);

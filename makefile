@@ -1,5 +1,8 @@
-all: mylen.o
-	gcc mylen.o
+all: driver.o str_funcs.o
+	gcc driver.o str_funcs.o
 
-mylen.o : mylen.c str.h
-	gcc -c mylen.c
+driver.o: driver.c str.h
+	gcc -c driver.c
+
+str_funcs.o: str_funcs.c str.h
+	gcc -c str_funcs.c
