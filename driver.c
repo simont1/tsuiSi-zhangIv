@@ -46,10 +46,12 @@ int main(){
 
   //testing strcmp implementation (file: mystrcmp.c)    
   printf("Testing strcmp:\n");
-  
+
+  char *s4 = "ab";
+  char *s5 = "abc";
   printf("Comparting ab to abc:\n");
-  //printf("[standard]:[%d]\n", strcmp('ab', 'abc'));
-  //printf("[mine]:[%d]\n\n", mystrcmp('ab', 'abc'));
+  printf("[standard]:[%d]\n", strcmp(s4, s5));
+  printf("[mine]:[%d]\n\n", mystrcmp(s4, s5));
   
   printf("Comparting abc to ab:\n");
   //printf("[standard]:[%d]\n", strcmp('abc', 'ab'));

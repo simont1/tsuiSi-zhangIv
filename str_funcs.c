@@ -1,5 +1,5 @@
 #include "str.h"
-
+#include <stdio.h>
 int mystrlen(char * source){
   int ctr = 0;
   while(*source){
@@ -17,4 +17,17 @@ int mystrlen(char * source){
 
 //char* mystrstr(char *s1, char *s2);
 
-//int mystrcmp(char *s1, char *s2);
+int mystrcmp(char *s1, char *s2){
+  int total = 0;
+
+  while(*s1){
+    total += *s1;
+    s1++;
+  }
+
+  while(*s2){
+    total -= *s2;
+    s2++;
+  }
+  return total;
+}
