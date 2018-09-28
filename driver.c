@@ -1,47 +1,35 @@
-#include "str.h"
+//#include "str.h"
 #include "mylen.c"
 
 #include <stdio.h>
 #include <string.h>
 
 int main(){
-  char *s1 = "?W?";
-  char *s2 = "hello";
-  char *s3 = "goodbye";
+  char s1[] = "?W?";
+  char s2[] = "hello";
+  char s3[] = "goodbye";
 
-  printf("s1: [%s]\n", *s1);
-  printf("s2: [%s]\n", *s2);
-  printf("s3: [%s]\n\n", *s3);
+  printf("s1: [%s]\n", s1);
+  printf("s2: [%s]\n", s2);
+  printf("s3: [%s]\n\n", s3);
 
   
-  //testing strlen implementation (file: mylen.c)
+  //testing strlen implementation 
   printf("Testing strlen(s2):\n");
   //printf("[standard]:[%d]\n", strlen(s2));
   //printf("[mine]:[%d]\n\n", mystrlen(s2));
 
   
-  //testing mystrcpy implementation (file: mystrcpy.c)  
-  printf("Testing strcpy(s1, s2):\n");
-  //printf("[standard]:[%s]\n", strcpy(s1, s2));
-  //printf("[mine]:[%s]\n\n", mystrcpy(s1, s2));
-
-  
-  //testing mystrncpy implementation (file: mystrncpy.c)  
+  //testing mystrncpy implementation 
   printf("Testing strncpy(s1, s3, 3):\n");
   //printf("[standard]:[%d]\n", strncpy(s1, s3, 3));
   //printf("[mine]:[%d]\n\n", mystrncpy(s1, s3, 3));
 
   
-  //testing strcat implementation (file: mystrcat.c)  
+  //testing strcat implementation 
   printf("Testing strcat(s1,s3):\n");
   //printf("[standard]:[%s]\n", strcat(s1, s3));
   //printf("[mine]:[%s]\n\n", mystrcat(s1, s3));
-
-  
-  //testing strncat implementation (file: strncat.c)  
-  printf("Testing strncat(s1, s2, 3):\n");
-  //printf("[standard]:[%s]\n", strncat(s1, s2, 3));
-  //printf("[mine]:[%s]\n\n", mystrncat(s1, s2, 3));
 
   
   //testing strchr implementation (file: mystrchr.c)  
