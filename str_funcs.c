@@ -46,7 +46,7 @@ char* mystrcat(char *dest, char *source){
 int mystrcmp(char *s1, char *s2){
   int total = 0;
 
-  while(*s1 == *s2){ 
+  while(*s1 == *s2 && (*s1 || *s2)){ 
     s1++;
     s2++;
   }
