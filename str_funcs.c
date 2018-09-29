@@ -41,23 +41,17 @@ char* mystrcat(char *dest, char *source){
 
 }
 
-//char* mystrchr(char *s, char c);
-
 //char* mystrstr(char *s1, char *s2);
 
 int mystrcmp(char *s1, char *s2){
   int total = 0;
 
-  while(*s1){
-    total += *s1;
+  while(*s1 == *s2){ 
     s1++;
-  }
-
-  while(*s2){
-    total -= *s2;
     s2++;
   }
-  return total;
+  return *s1-*s2;
+
 }
 
 
@@ -66,7 +60,7 @@ char * mystrchr(char *s, char c){
   char firstLoc = 0;
   char initLen = mystrlen(s);
   char * ans = &firstLoc;
-  while(strcmp(&c, s) && mystrlen(s)){
+  while(mystrcmp(&c, s) && mystrlen(s)){
     s++;
     firstLoc++;
     //use strcmp(c, s)
