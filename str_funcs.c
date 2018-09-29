@@ -60,7 +60,7 @@ char * mystrchr(char *s, char c){
   char firstLoc = 0;
   char initLen = mystrlen(s);
   char * ans = &firstLoc;
-  while(mystrcmp(&c, s) && mystrlen(s)){
+  while(strcmp(&c, s) && mystrlen(s)){
     s++;
     firstLoc++;
     //use strcmp(c, s)
@@ -69,7 +69,7 @@ char * mystrchr(char *s, char c){
   // printf("%d\n", initLen);
   // printf("%d\n", firstLoc == initLen);
   if (firstLoc == initLen){
-    return "nil";
+    return 0x0;
   }
   return ans;
 }

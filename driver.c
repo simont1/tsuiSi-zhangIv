@@ -38,17 +38,17 @@ int main(){
   char s8[20] = "hello";
   char s9[20] = "goodbye";
   //testing strchr implementation (file: mystrchr.c)
-  printf("Testing strchr(s1, 'l'):\n");
-  printf("[standard]:[%p]\n", strchr(s7, 'l'));
-  printf("[mine]:[%s]\n\n", mystrchr(s7, 'l'));
+  printf("Testing strchr(s8, 'l'):\n");
+  printf("[standard]:[%p]\n", strchr(s8, 'l'));
+  printf("[mine]:[%p]\n\n", mystrchr(s8, 'l'));
 
-  printf("Testing strchr(s1, 0):\n");
-  printf("[standard]:[%s]\n", strchr(s7, 0));
-  printf("[mine]:[%s]\n\n", mystrchr(s7, 0));
+  printf("Testing strchr(s7, 0):\n");
+  printf("[standard]:[%p]\n", strchr(s7, 0));
+  printf("[mine]:[%p]\n\n", mystrchr(s7, 0));
 
-  printf("Testing strchr(s1, 'z'):\n");
-  printf("[standard]:[%s]\n", strchr(s7, 'z'));
-  printf("[mine]:[%s]\n\n", mystrchr(s7, 'z'));
+  printf("Testing strchr(s7, 'z'):\n");
+  printf("[standard]:[%p]\n", strchr(s7, 'z'));
+  printf("[mine]:[%p]\n\n", mystrchr(s7, 'z'));
 
 
   //testing strcmp implementation
