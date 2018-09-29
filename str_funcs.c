@@ -9,9 +9,36 @@ int mystrlen(char * source){
   return ctr;
 }
 
-//char* mystrncpy(char *dest, char *source, int n);
+char* mystrncpy(char *dest, char *source, int n){
+  char *inc = dest;
+  while(n > 0){
+    if(*source){
+      *inc = *source;
+      source++;
+    }
+    else{
+      *inc = '\0';
+    }
+    inc++;
+    n-=1;
+  }
 
-//char* mystrcat(char *dest, char *source);
+  return dest;
+}
+
+char* mystrcat(char *dest, char *source){
+  char *inc = dest + mystrlen(dest);
+
+  while(*source){
+    *inc = *source;
+    inc++;
+    source++;
+  }
+  //*inc = '\0';
+  return dest;
+
+  
+}
 
 //char* mystrchr(char *s, char c);
 

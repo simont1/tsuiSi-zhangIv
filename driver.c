@@ -3,10 +3,11 @@
 #include <string.h>
 
 int main(){
-  char s1[] = "?W?";
-  char s2[] = "hello";
-  char s3[] = "goodbye";
+  char s1[20] = "?W?";
+  char s2[20] = "hello";
+  char s3[20] = "goodbye";
 
+  
   printf("s1: [%s]\n", s1);
   printf("s2: [%s]\n", s2);
   printf("s3: [%s]\n\n", s3);
@@ -20,46 +21,52 @@ int main(){
   
   //testing mystrncpy implementation 
   printf("Testing strncpy(s1, s3, 3):\n");
-  //printf("[standard]:[%d]\n", strncpy(s1, s3, 3));
-  //printf("[mine]:[%d]\n\n", mystrncpy(s1, s3, 3));
+  printf("[standard]:[%s]\n", strncpy(s1, s3, 3));
+  printf("[mine]:[%s]\n\n", mystrncpy(s1, s3, 3));
 
-  
+  char s4[20] = "?W?";
+  char s5[20] = "hello";
+  char s6[20] = "goodbye"; 
   //testing strcat implementation 
   printf("Testing strcat(s1,s3):\n");
-  //printf("[standard]:[%s]\n", strcat(s1, s3));
-  //printf("[mine]:[%s]\n\n", mystrcat(s1, s3));
+  printf("[standard]:[%s]\n", strcat(s4, s6));
+  char s10[20] = "?W?";
+  char s30[20] = "goodbye";
+  printf("[mine]:[%s]\n\n", mystrcat(s10, s30));
 
-  
+  char s7[20] = "?W?";
+  char s8[20] = "hello";
+  char s9[20] = "goodbye";
   //testing strchr implementation (file: mystrchr.c)  
   printf("Testing strchr(s1, 'l'):\n");
-  //printf("[standard]:[%p]\n", strchr(s1, 'l'));
-  //printf("[mine]:[%p]\n\n", mystrchr(s1, 'l'));
+  //printf("[standard]:[%p]\n", strchr(s7, 'l'));
+  //printf("[mine]:[%p]\n\n", mystrchr(s7, 'l'));
 
   printf("Testing strchr(s1, 0):\n");
-  //printf("[standard]:[%p]\n", strchr(s1, 0));
-  //printf("[mine]:[%p]\n\n", mystrchr(s1, 0));
+  //printf("[standard]:[%p]\n", strchr(s7, 0));
+  //printf("[mine]:[%p]\n\n", mystrchr(s7, 0));
   
   printf("Testing strchr(s1, 'z'):\n");
-  //printf("[standard]:[%p]\n", strchr(s1, 'z'));
-  //printf("[mine]:[%p]\n\n", mystrchr(s1, 'z'));
+  //printf("[standard]:[%p]\n", strchr(s7, 'z'));
+  //printf("[mine]:[%p]\n\n", mystrchr(s7, 'z'));
 
 
-  //testing strcmp implementation (file: mystrcmp.c)    
+  //testing strcmp implementation  
   printf("Testing strcmp:\n");
 
-  char *s4 = "ab";
-  char *s5 = "abc";
+  char *s11 = "ab";
+  char *s12 = "abc";
   printf("Comparting ab to abc:\n");
-  printf("[standard]:[%d]\n", strcmp(s4, s5));
-  printf("[mine]:[%d]\n\n", mystrcmp(s4, s5));
+  printf("[standard]:[%d]\n", strcmp(s11, s12));
+  printf("[mine]:[%d]\n\n", mystrcmp(s11, s12));
   
   printf("Comparting abc to ab:\n");
-  //printf("[standard]:[%d]\n", strcmp('abc', 'ab'));
-  //printf("[mine]:[%d]\n\n", mystrcmp('abc', 'ab'));
+  printf("[standard]:[%d]\n", strcmp(s12, s11));
+  printf("[mine]:[%d]\n\n", mystrcmp(s12, s11));
   
   printf("Comparting abc to abc:\n");
-  //printf("[standard]:[%d]\n", strcmp('abc', 'abc'));
-  //printf("[mine]:[%d]\n\n", mystrcmp('abc', 'abc'));
+  printf("[standard]:[%d]\n", strcmp(s12, s12));
+  printf("[mine]:[%d]\n\n", mystrcmp(s12, s12));
   
 
   
