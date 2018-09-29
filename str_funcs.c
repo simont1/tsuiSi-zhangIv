@@ -1,5 +1,6 @@
 #include "str.h"
 #include <stdio.h>
+#include <string.h> //temporary
 int mystrlen(char * source){
   int ctr = 0;
   while(*source){
@@ -37,7 +38,7 @@ char* mystrcat(char *dest, char *source){
   //*inc = '\0';
   return dest;
 
-  
+
 }
 
 //char* mystrchr(char *s, char c);
@@ -57,4 +58,24 @@ int mystrcmp(char *s1, char *s2){
     s2++;
   }
   return total;
+}
+
+
+
+char * mystrchr(char *s, char c){
+  char firstLoc = 0;
+  char initLen = mystrlen(s);
+  char * ans = &firstLoc;
+  while(strcmp(&c, s) && mystrlen(s)){
+    s++;
+    firstLoc++;
+    //use strcmp(c, s)
+  }
+  // printf("%d\n", firstLoc);
+  // printf("%d\n", initLen);
+  // printf("%d\n", firstLoc == initLen);
+  if (firstLoc == initLen){
+    return "nil";
+  }
+  return ans;
 }
