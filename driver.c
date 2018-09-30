@@ -50,7 +50,35 @@ int main(){
   printf("[standard]:[%p]\n", strchr(s7, 'z'));
   printf("[mine]:[%p]\n\n", mystrchr(s7, 'z'));
 
+  char str1[20] = "needle";
+  char str2[20] = "haystackneedle";
+  char str3[20] = "hayneedlestack";
+  char str4[20] = "pickle";
+  char str5[20] = "ham";
 
+
+  
+  printf("Testing strstr(str2, str1):\n");
+  printf("[standard]:[%p]\n", strstr(str2, str1));
+  printf("[mine]:[%p]\n", mystrstr(str2, str1));
+
+  printf("Testing strstr(str3, str1):\n");
+  printf("[standard]:[%p]\n", strstr(str3, str1));
+  printf("[mine]:[%p]\n\n", mystrstr(str3, str1));
+
+  printf("Testing strstr(str4, str1):\n");
+  printf("[standard]:[%p]\n", strstr(str4, str1));
+  printf("[mine]:[%p]\n\n", mystrstr(str4, str1));
+
+  printf("Testing strstr(str4, str1):\n");
+  printf("[standard]:[%p]\n", strstr(str4, str1));
+  printf("[mine]:[%p]\n\n", mystrstr(str4, str1));
+
+  printf("Testing strstr(str5, str1):\n");
+  printf("[standard]:[%p]\n", strstr(str5, str1));
+  printf("[mine]:[%p]\n\n", mystrstr(str5, str1));
+  
+  
   //testing strcmp implementation
   printf("Testing strcmp:\n");
 
