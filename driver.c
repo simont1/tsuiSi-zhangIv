@@ -18,7 +18,6 @@ int main(){
   printf("[standard]:[%ld]\n", strlen(s2));
   printf("[mine]:[%d]\n\n", mystrlen(s2));
 
-
   //testing mystrncpy implementation
   printf("Testing strncpy(s1, s3, 3):\n");
   printf("[standard]:[%s]\n", strncpy(s1, s3, 3));
@@ -50,6 +49,7 @@ int main(){
   printf("[standard]:[%p]\n", strchr(s7, 'z'));
   printf("[mine]:[%p]\n\n", mystrchr(s7, 'z'));
 
+
   char str1[20] = "needle";
   char str2[20] = "haystackneedle";
   char str3[20] = "hayneedlestack";
@@ -57,7 +57,7 @@ int main(){
   char str5[20] = "ham";
 
 
-  
+
   printf("Testing strstr(str2, str1):\n");
   printf("[standard]:[%p]\n", strstr(str2, str1));
   printf("[mine]:[%p]\n", mystrstr(str2, str1));
@@ -77,8 +77,8 @@ int main(){
   printf("Testing strstr(str5, str1):\n");
   printf("[standard]:[%p]\n", strstr(str5, str1));
   printf("[mine]:[%p]\n\n", mystrstr(str5, str1));
-  
-  
+
+
   //testing strcmp implementation
   printf("Testing strcmp:\n");
 

@@ -6,16 +6,19 @@ int mystrlen(char * source){
   while(*source){
     source++;
     ctr++;
+    //goes through char source until terminating null
   }
   return ctr;
 }
 
 char* mystrncpy(char *dest, char *source, int n){
   char *inc = dest;
+  //inc points to dest
   while(n > 0){
     if(*source){
       *inc = *source;
       source++;
+      //copies char by char for n number of chars
     }
     else{
       *inc = '\0';
@@ -29,7 +32,7 @@ char* mystrncpy(char *dest, char *source, int n){
 
 char* mystrcat(char *dest, char *source){
   char *inc = dest + mystrlen(dest);
-
+  //skips to the end of the string
   while(*source){
     *inc = *source;
     inc++;
@@ -42,23 +45,22 @@ char* mystrcat(char *dest, char *source){
 }
 
 int mystrcmp(char *s1, char *s2){
-  int total = 0;
-
-  while(*s1 == *s2 && (*s1 || *s2)){ 
+  while(*s1 == *s2 && (*s1 || *s2)){
     s1++;
     s2++;
   }
+  //adds up totals such that s1 and s2 have similar chars and still exist
   return *s1-*s2;
 
 }
 
 char* mystrchr(char *s, char c){
   char *upTo = s + mystrlen(s);
-  
+  //skips to the end of the string
   while(*s && *s != c){
     s++;
   }
-
+  //looks for c in s up until no more s
   if(c != 0 && s == upTo){
     return 0x0;
   }
@@ -77,13 +79,14 @@ char* mystrstr(char *s1, char *s2){
       str_here++;
       //printf("%d\n", str_here);
     }
+    //checks to see if substr is in str by counting # of similar consecutive chars
     if(mystrlen(s2) == str_here){
       return s1-str_here;
-    }
+    }//if same number of consecutive chars, return location
     s1++;
   }
 
   return 0x0;
-  
-  
+
+
 };
