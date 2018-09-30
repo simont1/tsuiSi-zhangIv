@@ -56,20 +56,15 @@ int mystrcmp(char *s1, char *s2){
 
 
 
-char * mystrchr(char *s, char c){
-  char firstLoc = 0;
-  char initLen = mystrlen(s);
-  char * ans = &firstLoc;
-  while(strcmp(&c, s) && mystrlen(s)){
+char* mystrchr(char *s, char c){
+  char *upTo = s + mystrlen(s);
+  
+  while(*s && *s != c){
     s++;
-    firstLoc++;
-    //use strcmp(c, s)
   }
-  // printf("%d\n", firstLoc);
-  // printf("%d\n", initLen);
-  // printf("%d\n", firstLoc == initLen);
-  if (firstLoc == initLen){
+
+  if(c != 0 && s == upTo){
     return 0x0;
   }
-  return ans;
+  return s;
 }
